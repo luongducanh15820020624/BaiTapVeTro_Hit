@@ -1,0 +1,29 @@
+import java.util.Scanner;
+public class Bai2 {
+    public static void main(String[] args) {
+
+        Scanner sc = new Scanner(System.in);
+
+        System.out.print("Nhap canh a: ");
+        int a = sc.nextInt();
+        System.out.print("Nhap canh b: ");
+        int b = sc.nextInt();
+        System.out.print("Nhap canh c: ");
+        int c = sc.nextInt();
+
+        if (a <= 0 || b <= 0 || c <= 0)
+            System.out.println("Khong Hop Le!");
+        else {
+            if ((a * a == b * b + c * c) || (b * b == a * a + c * c) || (c * c == a * a + b * b)) {
+                System.out.print("Tam Giac Vuong!: ");
+                if (a == b || a == c || b == c)
+                    System.out.println("Tam Giac Vuong Can!");
+            } else if (a == b && b == c)
+                System.out.println("Tam Giac Deu!");
+            else if ((a == b || a == c || b == c))
+                System.out.println("Tam Giac Can!");
+            else
+                System.out.println("Tam Giac Thuong!");
+        }
+    }
+}
